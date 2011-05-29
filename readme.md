@@ -281,3 +281,26 @@ Note: it is possible since express@2.2.1.
     <html>
 		<div>myview</div>
     </html>
+
+### {{literal}} tag
+	// tpl
+    {{literal}}
+    ${will_not_be_evaluated}
+    {{/literal}}
+    
+    // output
+
+    ${will_not_be_evaluated}
+    
+    // tpl
+    {{literal foo}}
+    {{/literal}}
+    {{/literal bar}}
+    {{/literal foo}}
+    
+    // output
+    
+    
+    {{/literal}}
+    {{/literal bar}}
+
